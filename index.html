@@ -10,6 +10,22 @@
 		<link href="https://cdn.bootcss.com/mdui/0.4.2/css/mdui.min.css" rel="stylesheet">
 		<script src="./js/getStatus.js"></script>
 		<script src="./js/getAddress.js"></script>
+		<!-- Matomo -->
+		<script type="text/javascript">
+			var _paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+	  		var u="//s.tzg6.com/";
+	  		_paq.push(['setTrackerUrl', u+'matomo.php']);
+	  		_paq.push(['setSiteId', '8']);
+	  		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	  		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+  		</script>
+  		<!-- End Matomo Code -->
+  
 	</head>
 	<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
 		<header class="mdui-appbar mdui-appbar-fixed">
