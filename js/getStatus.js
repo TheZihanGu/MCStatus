@@ -1,4 +1,5 @@
 function getStatus() {
+    document.getElementById("progress").style.display="";
     var ip = document.getElementById("ip");
     var port = document.getElementById("port");
     if (ip.value == ""){
@@ -31,6 +32,7 @@ function getStatus() {
                     document.getElementById("result-motd").innerText = result.motd;
                     document.getElementById("result-current_players").innerText = result.current_players;
                     document.getElementById("result-max_players").innerText = result.max_players;
+                    document.getElementById("progress").style.display="none";
                 }
                 else{
                     document.getElementById("result-latency-style").style.display="none";
@@ -38,6 +40,7 @@ function getStatus() {
                     document.getElementById("result-motd-style").style.display="none";
                     document.getElementById("result-current_players-style").style.display="none";
                     document.getElementById("result-max_players-style").style.display="none";
+                    document.getElementById("progress").style.display="none";
                 }
             }
         };
