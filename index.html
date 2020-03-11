@@ -9,6 +9,7 @@
 		<title>TZG MCStatus</title>
 		<link href="https://cdn.bootcss.com/mdui/0.4.2/css/mdui.min.css" rel="stylesheet">
 		<script src="./js/getStatus.js"></script>
+		<script src="./js/getAddress.js"></script>
 	</head>
 	<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
 		<header class="mdui-appbar mdui-appbar-fixed">
@@ -75,6 +76,15 @@
 							<h5 id="result-motd-style" style=display:none;>MOTD：<d id="result-motd"></d></h5>
 							<h5 id="result-current_players-style" style=display:none;>在线人数：<d id="result-current_players"></d></h5>
 							<h5 id="result-max_players-style" style=display:none;>最大人数：<d id="result-max_players"></d></h5>
+							<button class="mdui-btn mdui-color-theme-accent mdui-ripple" style="display:block;margin:0 auto" mdui-dialog="{target: '#getAddress'}">获取请求链接</button>
+							<div class="mdui-dialog" id="getAddress" onclick="getAddress()">
+								<div class="mdui-dialog-title">请求链接(HTTP GET)</div>
+								<div class="mdui-dialog-content" id="address"></div>
+								<div class="mdui-dialog-actions">
+									<button class="mdui-btn mdui-ripple" mdui-dialog-confirm>好的</button>
+								</div>
+							</div>
+						</div>	  
 						</div>
 					</div>
 				</div>
