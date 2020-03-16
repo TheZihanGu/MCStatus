@@ -49,11 +49,14 @@
 		<div class="mdui-tab mdui-color-indigo" mdui-tab>
 			<a href="#home" class="mdui-ripple get_value_class" onclick="window.location.hash='home'">
 				<label>首页</label>
+			</a>
+			<a href="#tietu" class="mdui-ripple get_value_class" onclick="window.location.hash='tietu'">
+				<label>获取贴图</label>
             </a>
             <a href="#donate" class="mdui-ripple get_value_class" onclick="window.location.hash='donation'">
 				<label>赞赏</label>
 			</a>
-			<a href="#about" class="mdui-ripple get_value_class" onclick="window.location.hash='donation'">
+			<a href="#about" class="mdui-ripple get_value_class" onclick="window.location.hash='about'">
 				<label>关于</label>
 			</a>
 		</div>
@@ -107,12 +110,39 @@
 									<button class="mdui-btn mdui-ripple" mdui-dialog-confirm>好的</button>
 								</div>
 							</div>
+							<button class="mdui-btn mdui-color-theme-accent mdui-ripple" style="display:block;margin:0 auto" mdui-dialog="{target: '#getImage'}">获取服务器贴图</button>
+							<div class="mdui-dialog" id="getAddress" onclick="getAddress()">
+								<div class="mdui-dialog-title">请求链接(HTTP GET)</div>
+								<div class="mdui-dialog-content" id="image"></div>
+								<div class="mdui-dialog-actions">
+									<button class="mdui-btn mdui-ripple" mdui-dialog-confirm>好的</button>
+								</div>
+							</div>
 						</div>	  
 						</div>
 					</div>
 				</div>
 			</div>
         </div>
+		
+		<div id="tietu" class="mdui-p-a-2">
+			<div class="mdui-panel" mdui-panel>
+				<div class="mdui-panel-item mdui-panel-item-open">
+					<div class="mdui-panel-item-body">
+						<p></p>
+						<div class="mdui-typo">
+							<h3>获取服务器状态贴图</h3>
+							<h6>如果您需要在论坛的签名区或服务器官网等其他地方嵌入你的服务器状态，那么可以使用这个贴图API进行实现.</h6>
+							<h6>调用：https://api.tzg6.com/api/mcstatus-image.png?ip={IP}&port={Port}&motd={Motd}</h6>
+							<h6>此接口将会直接返回您的服务器贴图(Image/PNG)</h6>
+							<h6>建议查看此接口的<a href="https://api.tzg6.com/doc/MCStatus-Image/index.html">此接口的详细文档</a>进行调用.</h6>
+							<h6>Example:</h6>
+							<img src="https://api.tzg6.com/api/mcstatus-image.png?ip=mc.tzg6.com&port=25565">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<div id="donate" class="mdui-p-a-2">
 			<div class="mdui-panel" mdui-panel>
