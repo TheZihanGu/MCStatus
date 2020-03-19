@@ -1,6 +1,7 @@
 # TZG MCStatus
 这是一个可以帮助你查询服务器状态的网站。   
 请注意：本网站暂不支持SRV解析的服务器IP地址。   
+MCBBS宣传帖：[https://www.mcbbs.net/thread-983456-1-1.html](https://www.mcbbs.net/thread-983456-1-1.html)
 
 ## 制作此网站的原因
 之前的时候为了能够随时查询自己服务器的状态，就去找了很多网站，但是大部分都已经挂掉了。于是决定自己写一个...就有了TZG MCStatus.   
