@@ -10,9 +10,8 @@
 		<!-- BEGIN:MDUI -->
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.0/css/mdui.min.css">
         <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.0/js/mdui.min.js"></script>
-        <!-- END:MDUI -->
-		<script src="./js/getStatus.js"></script>
-		<script src="./js/getAddress.js"></script>
+		<!-- END:MDUI -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<!-- Matomo -->
 		<script type="text/javascript">
 			var _paq = window._paq || [];
@@ -97,18 +96,18 @@
 						<p></p>
 						<div class="mdui-typo">
 							<h5>查询结果</h5>
-							<h5>服务器IP：<d id="result-ip"></d></h5>
-							<h5>端口：<d id="result-port"></d></h5>
-							<h5>状态：<d id="result-online"></d></h5>
-							<h5 id="result-latency-style" style=display:none;>延迟：<d id="result-latency"></d></h5>
-							<h5 id="result-version-style" style=display:none;>服务器版本：<d id="result-version"></d></h5>
-							<h5 id="result-motd-style" style=display:none;>MOTD：<d id="result-motd"></d></h5>
-							<h5 id="result-current_players-style" style=display:none;>在线人数：<d id="result-current_players"></d></h5>
-							<h5 id="result-max_players-style" style=display:none;>最大人数：<d id="result-max_players"></d></h5>
+							<h5 id="result-ip">服务器IP：{{ message }}</h5>
+							<h5 id="result-port">端口：{{ message }}</h5>
+							<h5 id="result-online">状态：{{ message }}</h5>
+							<h5 id="result-latency" style=display:none;>延迟：{{ message }}</h5>
+							<h5 id="result-version" style=display:none;>服务器版本：{{ message }}</h5>
+							<h5 id="result-motd" style=display:none;>MOTD：{{ message }}</h5>
+							<h5 id="result-current_players" style=display:none;>在线人数：{{ message }}</h5>
+							<h5 id="result-max_players" style=display:none;>最大人数：{{ message }}</h5>
 							<button class="mdui-btn mdui-color-theme-accent mdui-ripple" style="display:block;margin:0 auto" mdui-dialog="{target: '#getAddress'}">获取请求链接</button>
 							<div class="mdui-dialog" id="getAddress" onclick="getAddress()">
 								<div class="mdui-dialog-title">请求链接(HTTP GET)</div>
-								<div class="mdui-dialog-content" id="address"></div>
+								<div class="mdui-dialog-content" id="address">请点击这里刷新: {{ message }}</div>
 								<div class="mdui-dialog-actions">
 									<button class="mdui-btn mdui-ripple" mdui-dialog-confirm>好的</button>
 								</div>
@@ -170,4 +169,5 @@
 			</div>
 		</div>
 	</body>
+	<script src="./js/page.js"></script>
 </html>
